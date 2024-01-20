@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This is the CSS code that defines the style of the webpage */
+
+        /* This sets the margin and padding of the whole page to zero */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* This sets the height and width of the iframe to 100% of the viewport */
+        iframe {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* This sets the position of the iframe to absolute and the top to 100px, so that it leaves some space for the horizontal band */
+        /* Changed the top from 50px to 100px */
+        iframe {
+            position: absolute;
+            top: 100px;
+        }
+
+        /* This sets the position of the horizontal band to fixed and the height to 100px */
+        /* Changed the height from 50px to 100px */
+        .band {
+            position: fixed;
+            height: 100px;
+        }
+
+        /* This sets the background color of the horizontal band to black and the width to 100% of the viewport */
+        .band {
+            background-color: black;
+            width: 100vw;
+        }
+
+        /* This sets the position of the logo to absolute and the left and top to 10px */
+        .logo {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        /* This sets the height and width of the logo to 30px */
+        .logo {
+            height: 30px;
+            width: 30px;
+        }
+
+        /* This sets the position of the buttons to absolute and the top to 10px */
+        .buttons {
+            position: absolute;
+            top: 10px;
+        }
+
+        /* This sets the left of the buttons to 50% of the viewport minus 200px, so that they are centered */
+        /* Changed the left from 50vw - 100px to 50vw - 200px */
+        .buttons {
+            left: calc(50vw - 200px);
+        }
+
+        /* This sets the height and width of the buttons to 80px and 160px respectively */
+        /* Changed the height from 40px to 80px and the width from 80px to 160px */
+        .buttons button {
+            height: 50px;
+            width: 130px;
+        }
+
+        /* This sets the margin of the buttons to 10px */
+        /* Changed the margin from 5px to 10px */
+        .buttons button {
+            margin: 10px;
+        }
+
+        /* This sets the border of the buttons to none and the border-radius to 40px */
+        /* Changed the border-radius from 5px to 40px */
+        .buttons button {
+            border: none;
+            border-radius: 40px;
+        }
+
+        /* This sets the font of the buttons to Arial and the font-size to 16px */
+        .buttons button {
+            font-family: Arial;
+            font-size: 16px;
+        }
+
+        /* This sets the color of the buttons to white and the background-color to light gray */
+        /* Changed the background-color from green to light gray */
+        .buttons button {
+            color: white;
+            background-color: gray;
+        }
+
+        /* This sets the cursor of the buttons to pointer */
+        .buttons button {
+            cursor: pointer;
+        }
+
+        /* This sets the color of the disabled button to gray and the cursor to default */
+        .buttons button:disabled {
+            color: gray;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is the HTML code that defines the structure of the webpage -->
+
+    <!-- This is the iframe that displays the interactive house for sale -->
+    <iframe src="https://lumalabs.ai/embed/473f2acd-e13c-48e2-a06c-b1acac710424?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false" frameborder="0" title="luma embed"></iframe>
+
+    <!-- This is the horizontal band that contains the logo and the buttons -->
+    <div class="band">
+        <!-- This is the logo that is a placeholder for your logo -->
+        <img src="logo.png" alt="Logo" class="logo">
+        <!-- This is the div that contains the buttons -->
+        <div class="buttons">
+            <!-- This is the button that returns the user to the exterior page -->
+            <button id="exterior">EXTERIOR</button>
+            <!-- This is the button that links to the interior page -->
+            <button id="interior" disabled>INTERIOR</button>
+        </div>
+    </div>
+
+    <!-- This is the Javascript code that defines the behavior of the webpage -->
+
+    <script>
+        // This gets the exterior button by its id
+        var exterior = document.getElementById("exterior");
+
+        // This gets the interior button by its id
+        var interior = document.getElementById("interior");
+
+        // This adds a click event listener to the exterior button
+        exterior.addEventListener("click", function() {
+            // This reloads the current page
+            location.reload();
+        });
+
+        // This adds a click event listener to the interior button
+        interior.addEventListener("click", function() {
+            // This checks if the interior button is not disabled
+            if (!interior.disabled) {
+                // This redirects the user to the interior page
+                window.location.href = "interior.html";
+            }
+        });
+    </script>
+</body>
+</html>
