@@ -1,0 +1,59 @@
+/* This is the CSS file */
+
+/* This is the style for the body element */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  height: 100vh;
+  /* This is the overflow property that sets how the content is clipped when it overflows the element's box */
+  overflow: hidden;
+}
+
+/* This is the style for the band class */
+.band {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* This is the style for the interior and exterior classes */
+.interior, .exterior {
+  width: 300px;
+  height: 100px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0;
+  background-color: white;
+  cursor: pointer;
+  z-index: 1;
+  margin: 0 20px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+/* This is the style for the disabled class */
+.disabled {
+  background-color: #999999;
+  color: #666666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* This is the style for the responsive-iframe class */
+.responsive-iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+  aspect-ratio: 16 / 9;
+}
