@@ -218,7 +218,7 @@
         }
 
         /* Responsive styles */
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             /* Hide navbar menu on small screens */
             .navbar-menu {
                 display: none;
@@ -247,10 +247,38 @@
                 height: 80%;
             }
 
-            /* Adjust pricing cards on small screens */
+            /* Reduce the font size of the pricing card elements */
+            .pricing-card-header h3 {
+                font-size: 18px;
+            }
+
+            .pricing-card-body p {
+              font-size: 14px;
+            }
+
+            .pricing-card-body span {
+              font-size: 24px;
+            }
+
+            .pricing-card-footer a {
+              font-size: 14px;
+            }
+
+            /* Reduce the width of the pricing cards */ 
             .pricing-card {
-                width: 80%;
-                height: auto;
+              width: 60%;
+              
+            /* Change the display of the pricing section and the pricing cards to block*/ 
+            .pricing {
+              display: block;
+            }
+
+            .pricing-card {
+              display: block;
+              width: 100%;
+              margin: 10px auto;
+            }
+}
             }
         }
     </style>
